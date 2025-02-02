@@ -16,8 +16,8 @@ Liste les templates disponibles :
     curl -X GET 'http://localhost:8011/list-templates/'
 
 
-Requete pour convertir un modele docx en lui passant en parametre les variables
-LEs variables doivent etre au format {{ma_variable}} dans le modèle docx
+Requete pour convertir un modele docx en lui passant en parametre les variables.
+Les variables doivent etre au format {{ma_variable}} dans le modèle docx
 
     curl -X 'POST' \
       'http://localhost:8011/generate-pdf/?modele=fiche.docx' \
