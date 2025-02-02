@@ -3,8 +3,8 @@ name: Build and Push Docker Image to GHCR
 on:
   push:
     branches:
-      - main  # Exécuter le build seulement sur la branche principale
-  workflow_dispatch:  # Permet un déclenchement manuel
+      - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -23,12 +23,12 @@ jobs:
 
       - name: Construire et tagger l'image Docker
         run: |
-          IMAGE_NAME=ghcr.io/${{ github.actor }}/pdf-api
+          IMAGE_NAME=ghcr.io/${{ github.actor.lowercase() }}/pdf-api
           docker build -t $IMAGE_NAME:latest .
           docker tag $IMAGE_NAME:latest $IMAGE_NAME:${{ github.sha }}
 
       - name: Pousser l'image vers GHCR
         run: |
-          IMAGE_NAME=ghcr.io/${{ github.actor }}/pdf-api
+          IMAGE_NAME=ghcr.io/${{ github.actor.lowercase() }}/pdf-api
           docker push $IMAGE_NAME:latest
           docker push $IMAGE_NAME:${{ github.sha }}
