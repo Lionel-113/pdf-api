@@ -11,7 +11,7 @@ Lancer le container pour utiliser les templates inclus dans le dossier templates
 
     docker run -p 8011:8011 -v .\templates:/app/templates pdf-api
 
-Authentification des requetes par un token. 
+Authentification des requetes par un token.  
 Le token est généré à chaque buid et doit etre recupéré dans le container dans le fichier /app/config.json
 
 
@@ -21,7 +21,7 @@ Liste les templates disponibles :
     -H "Authorization: Bearer 52549071480d42c42e7e1e09759df3509ef4b69e272b0ffce407dfd7a23faea0"
 
 
-Requete pour convertir un modele docx en lui passant en parametre les variables.
+Requete pour convertir un modele docx en lui passant en parametre les variables.  
 Les variables doivent etre au format {{ma_variable}} dans le modèle docx
 
     curl -X 'POST' \
