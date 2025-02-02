@@ -1,4 +1,7 @@
 # pdf-api
+
+Cette application permet de convertir un fichier template au format docx en format PDF en injectant des valeurs dans des variables pour rendre dynamique le fichier template  
+
 Build du container :
 
     docker build -t pdf-api .
