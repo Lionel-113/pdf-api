@@ -12,5 +12,5 @@ COPY templates /app/templates/
 RUN python3 -c "import secrets, json; json.dump({'api_token': secrets.token_hex(32)}, open('/app/config.json', 'w'))" && \
     echo 'TOKEN GÉNÉRÉ :' $(jq -r '.api_token' /app/config.json)
 
-EXPOSE 8000
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+EXPOSE 8011
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8011"]
