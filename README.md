@@ -7,7 +7,8 @@ Lancer le container pour utiliser les templates inclus dans le container :
 
     docker run -p 8011:8011 pdf-api
 
-Lancer le container pour utiliser les templates inclus dans le dossier templates local (chargement dynamique des templates) :
+Lancer le container pour utiliser les templates inclus dans le dossier templates local (chargement dynamique des templates)  
+Par defaut ce container écoute sur le port 8011... adapter le port dans le Dockerfile  
 
     docker run -p 8011:8011 -v .\templates:/app/templates pdf-api
 
